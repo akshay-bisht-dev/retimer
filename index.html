@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>retimer | Discover Light Therapy Glasses</title>
+    <meta
+      name="description"
+      content="Discover retimer wearable light therapy glasses, designed to help support your sleep-wake rhythm through carefully timed light exposure."
+    />
+    <meta name="theme-color" content="#080A0C" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <!-- canonical + og:url are injected at build time from SITE_URL (see vite.config.js / README). -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="retimer" />
+    <meta property="og:title" content="retimer | Discover Light Therapy Glasses" />
+    <meta
+      property="og:description"
+      content="Wearable blue-green light therapy, designed around your body's internal clock."
+    />
+    <meta property="og:image" content="__SITE_URL__img/hero-product-1600.webp" />
+    <meta property="og:image:alt" content="retimer 3 light therapy glasses" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="image" href="./img/hero-product-1100.webp" imagesrcset="./img/hero-product-640.webp 640w, ./img/hero-product-1100.webp 1100w, ./img/hero-product-1600.webp 1600w" imagesizes="(max-width: 900px) 94vw, 64vw" fetchpriority="high" />
+
+    <!-- Product data limited to facts shown on the page and verified on retimer.com.au. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "retimer 3 Light Therapy Glasses",
+        "brand": { "@type": "Brand", "name": "retimer" },
+        "description": "Wearable light therapy glasses that deliver blue-green light (500–504 nm) from below the eyes to help support the body's circadian rhythm.",
+        "weight": { "@type": "QuantitativeValue", "value": 36, "unitCode": "GRM" },
+        "url": "https://www.retimer.com.au/product/retimer-3/"
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p style="padding: 24px; color: #fff; background: #080a0c">
+        This page works best with JavaScript enabled. Visit
+        <a href="https://www.retimer.com.au/product/retimer-3/" style="color: #42c1c7">retimer.com.au</a> for product details.
+      </p>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

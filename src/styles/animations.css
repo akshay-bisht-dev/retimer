@@ -1,0 +1,178 @@
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-4%, 3%); }
+  40% { transform: translate(3%, -2%); }
+  60% { transform: translate(-2%, -4%); }
+  80% { transform: translate(4%, 2%); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+
+@keyframes cue {
+  0% { transform: translateY(-100%); }
+  60%, 100% { transform: translateY(100%); }
+}
+
+@keyframes ping {
+  0% { transform: scale(0.6); opacity: 1; }
+  80%, 100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes veil-lift {
+  to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* =========================================================
+   Reduced motion: no scrubbing, no pinning, every scene in its
+   final state, all content in normal reading order.
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .grain {
+    display: none;
+  }
+
+  .scene {
+    height: auto;
+  }
+  .scene__sticky {
+    position: relative;
+    height: auto;
+    overflow: clip;
+  }
+
+  /* 02 — scenes become a grid of captioned stills */
+  .problem .scene__sticky {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .problem__layers {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+  }
+  .problem__layer {
+    position: relative;
+    aspect-ratio: 4 / 3;
+  }
+  .problem__caption {
+    top: auto;
+    bottom: 20px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
+  }
+  .problem__time {
+    font-size: clamp(1.6rem, 3vw, 2.6rem);
+  }
+  .problem__tint,
+  .problem__vignette {
+    display: none;
+  }
+  .problem__text {
+    position: relative;
+    padding-block: 120px 48px;
+    bottom: auto;
+  }
+  .problem__title {
+    display: block;
+  }
+  .problem__a,
+  .problem__b {
+    display: block;
+  }
+
+  /* 03 — product with annotations as a list */
+  .reveal .scene__sticky {
+    padding: 120px 0 64px;
+  }
+  .reveal__text,
+  .reveal__stage {
+    position: relative;
+    top: auto;
+  }
+  .reveal__stage {
+    padding-top: 40px;
+  }
+  .reveal__product {
+    translate: none;
+  }
+  .reveal__bg {
+    opacity: 1;
+  }
+  .reveal__annots {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .annot {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+  .annot__dot {
+    display: none;
+  }
+  .annot__card,
+  .annot--button .annot__card,
+  .annot--pads .annot__card {
+    position: static;
+    width: auto;
+    text-align: left;
+    padding: 2px 0 2px 14px;
+    border-left: 1px solid var(--light);
+    border-right: 0;
+  }
+  .annot__card span {
+    display: block !important;
+  }
+
+  /* 04 — every step listed beside the finished diagram */
+  .sci__layout {
+    padding-block: 48px 96px;
+  }
+  .sci__steps {
+    gap: 40px;
+  }
+  .sci__step {
+    grid-area: auto;
+  }
+  .sci__dots {
+    display: none;
+  }
+  .sci__dawn {
+    opacity: 1;
+  }
+  .sci__figure {
+    padding: 0;
+  }
+  .sci__disclaimer {
+    position: static;
+    margin-top: 12px;
+  }
+
+  /* 06 — scenes flow instead of stacking */
+  .life__scene {
+    position: relative;
+    height: auto;
+    min-height: 100svh;
+  }
+
+}

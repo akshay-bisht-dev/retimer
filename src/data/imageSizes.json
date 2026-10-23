@@ -1,0 +1,118 @@
+{
+  "hero-product": {
+    "widths": [
+      640,
+      1100,
+      1600
+    ],
+    "width": 1637,
+    "height": 692
+  },
+  "product-side": {
+    "widths": [
+      480
+    ],
+    "width": 904,
+    "height": 380
+  },
+  "feature-light": {
+    "widths": [
+      500
+    ],
+    "width": 500,
+    "height": 1000
+  },
+  "feature-wearable": {
+    "widths": [
+      540,
+      1080
+    ],
+    "width": 1080,
+    "height": 1350
+  },
+  "product-case": {
+    "widths": [
+      400
+    ],
+    "width": 600,
+    "height": 600
+  },
+  "product-charging": {
+    "widths": [
+      230
+    ],
+    "width": 230,
+    "height": 232
+  },
+  "product-app": {
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 864
+  },
+  "lifestyle-morning": {
+    "widths": [
+      540,
+      1080
+    ],
+    "width": 1080,
+    "height": 1350
+  },
+  "lifestyle-travel": {
+    "widths": [
+      540,
+      1080
+    ],
+    "width": 1080,
+    "height": 1350
+  },
+  "lifestyle-everyday": {
+    "widths": [
+      540,
+      1080
+    ],
+    "width": 1080,
+    "height": 1350
+  },
+  "problem-night": {
+    "widths": [
+      540,
+      1080
+    ],
+    "width": 1080,
+    "height": 1350
+  },
+  "problem-screens": {
+    "widths": [
+      500,
+      1000
+    ],
+    "width": 1000,
+    "height": 667
+  },
+  "problem-dark-morning": {
+    "widths": [
+      489,
+      978
+    ],
+    "width": 978,
+    "height": 654
+  },
+  "problem-sunrise": {
+    "widths": [
+      500,
+      1000
+    ],
+    "width": 1000,
+    "height": 667
+  },
+  "brand-logo": {
+    "widths": [
+      417
+    ],
+    "width": 417,
+    "height": 90
+  }
+}

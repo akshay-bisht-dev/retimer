@@ -1,0 +1,62 @@
+.display,
+.headline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--white);
+  text-wrap: balance;
+}
+
+.display {
+  font-size: clamp(2.75rem, 7.4vw, 8.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+}
+
+.headline {
+  font-size: clamp(2.1rem, 4.8vw, 5.25rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.lead {
+  font-size: clamp(1rem, 0.9rem + 0.45vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--text-dim);
+  max-width: 36ch;
+  text-wrap: pretty;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ice);
+}
+
+.label__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--light);
+  box-shadow: 0 0 12px 2px rgba(var(--light-rgb), 0.7);
+}
+
+/* Masked line reveal markup: .split > .line > .line__inner */
+.split .line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+
+.split .line__inner {
+  display: inline-block;
+  will-change: transform;
+}
