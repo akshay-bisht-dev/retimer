@@ -19,10 +19,10 @@ function siteUrl() {
   };
 }
 
-// base './' keeps asset paths relative so the build works from any subpath
-// (GitHub Pages, a CDN folder, or a domain root).
+// BASE_PATH is the absolute path the site is served from, e.g. /retimer/ on
+// GitHub Pages (see `npm run build:pages`). Defaults to the domain root.
 export default defineConfig({
-  base: './',
+  base: process.env.BASE_PATH || '/',
   plugins: [react(), siteUrl()],
   // Listen on IPv4 and IPv6 so http://localhost and http://127.0.0.1 both work
   // (and phones on the same network can open the LAN URL).

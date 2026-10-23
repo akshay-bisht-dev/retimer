@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build && vite build --ssr src/entry-server.jsx --outDir .ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
-    "images": "node scripts/optimize-images.mjs"
+    "images": "node scripts/optimize-images.mjs",
+    "build:pages": "BASE_PATH=/retimer/ SITE_URL=https://akshay-bisht-dev.github.io/retimer/ npm run build && touch dist/.nojekyll"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",
