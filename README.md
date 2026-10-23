@@ -107,14 +107,24 @@ Re-verify the price and claims before each release.
 
 ## Deployment
 
-The output is static. Deploy `dist/` to any host: Netlify, Vercel, Cloudflare Pages, S3 or GitHub Pages.
+Live on GitHub Pages: **https://akshay-bisht-dev.github.io/retimer/** (served from the `gh-pages` branch).
+
+To redeploy after changes:
 
 ```bash
-SITE_URL=https://your-domain.com/retimer/ npm run build
+npm run build:pages            # BASE_PATH=/retimer/ + SITE_URL, writes dist/ with .nojekyll
+# then publish dist/ to the gh-pages branch, e.g.:
+npx gh-pages -d dist --dotfiles
 ```
 
-- `SITE_URL` adds `<link rel="canonical">` and `og:url`, and makes `og:image` absolute. Without it, canonical is omitted. Set it for production.
-- `base: './'` keeps every asset path relative, so the build works from a domain root or a subfolder.
+The output is static, so any host works (Netlify, Vercel, Cloudflare Pages, S3):
+
+```bash
+BASE_PATH=/ SITE_URL=https://your-domain.com/ npm run build
+```
+
+- `BASE_PATH` is the absolute path the site is served from. It defaults to `/`. GitHub project pages need `/retimer/`.
+- `SITE_URL` adds `<link rel="canonical">` and `og:url`, and makes `og:image` absolute.
 - `public/robots.txt` allows indexing. If this page should not compete with retimer.com.au in search, change it to `Disallow: /`.
 
 ## Quality checks (production build, local)
